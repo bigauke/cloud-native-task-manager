@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: task-manager-config
+  namespace: task-manager
+data:
+  DATABASE_HOST: postgres-service
+  DATABASE_PORT: "5432"
+  DATABASE_NAME: taskmanager
+  NEXT_PUBLIC_API_URL: "http://localhost:30082"
+  PROMETHEUS_URL: "http://prometheus:9090"
+  LOKI_URL: "http://loki:3100"

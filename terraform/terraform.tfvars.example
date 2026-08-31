@@ -1,0 +1,4 @@
+cluster_name    = "NOME DO CLUSTER"
+node_count      = 2
+k3d_wait        = true
+kubeconfig_path = "./kubeconfig"

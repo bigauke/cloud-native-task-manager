@@ -10,3 +10,8 @@ build
 *.env.production.local
 coverage
 package-lock.json
+.terraform*
+kubeconfig
+terraform.tfstate*
+terraform.tfvars
+secret.yaml

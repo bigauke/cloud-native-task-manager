@@ -8,7 +8,7 @@ terraform {
 }
 
 provider "google" {
-  project = "python-app-487505"
+  project = "burnished-stone-508009-m3"
   region  = "us-central1"
   zone    = "us-central1-a"
 }
@@ -65,7 +65,7 @@ resource "google_compute_firewall" "allow_3000" {
 
 # Cloud Storage: Criação de Bucket
 resource "google_storage_bucket" "task_manager_bucket" {
-  name          = "bucket-task-manager-python-app-487505"
+  name          = "bucket-task-manager-burnished-stone-508009-m3"
   location      = "US"
   force_destroy = true
 

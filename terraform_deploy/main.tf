@@ -8,13 +8,12 @@ terraform {
 }
 
 provider "google" {
-  # O ID do projeto será pego automaticamente do gcloud auth application-default
-  region = "us-central1"
-  zone   = "us-central1-a"
+  project = "python-app-487505"
+  region  = "us-central1"
+  zone    = "us-central1-a"
 }
 
-# Obtém informações do projeto atual para uso (ex: nome do bucket)
-data "google_project" "project" {}
+# Removido data source para evitar erro de permissão.
 
 # Instância Compute Engine
 resource "google_compute_instance" "task_manager_vm" {
@@ -66,7 +65,7 @@ resource "google_compute_firewall" "allow_3000" {
 
 # Cloud Storage: Criação de Bucket
 resource "google_storage_bucket" "task_manager_bucket" {
-  name          = "bucket-task-manager-${data.google_project.project.project_id}"
+  name          = "bucket-task-manager-python-app-487505"
   location      = "US"
   force_destroy = true
 
